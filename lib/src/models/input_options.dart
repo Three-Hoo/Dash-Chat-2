@@ -67,7 +67,7 @@ class InputOptions {
 
   /// Input decoration to customize the design of the input
   /// You can use defaultInputDecoration to only orride some variables
-  final InputDecoration? inputDecoration;
+  final InputDecoration Function(void Function() inputDecoration)? inputDecoration;
 
   /// Use to override the default TextCapitalization
   final TextCapitalization textCapitalization;

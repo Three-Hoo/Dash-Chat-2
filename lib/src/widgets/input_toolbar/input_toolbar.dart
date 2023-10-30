@@ -83,8 +83,9 @@ class InputToolbarState extends State<InputToolbar>
                   enabled: !widget.inputOptions.inputDisabled,
                   textCapitalization: widget.inputOptions.textCapitalization,
                   textInputAction: widget.inputOptions.textInputAction,
-                  decoration: widget.inputOptions.inputDecoration ??
-                      defaultInputDecoration(),
+                  decoration: widget.inputOptions.inputDecoration != null 
+                    ? widget.inputOptions.inputDecoration!() 
+                    : defaultInputDecoration(),
                   maxLength: widget.inputOptions.maxInputLength,
                   minLines: 1,
                   maxLines: widget.inputOptions.sendOnEnter
